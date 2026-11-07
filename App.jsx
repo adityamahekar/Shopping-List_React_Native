@@ -1,37 +1,36 @@
-import { Text, View, Image, Button, useColorScheme, TouchableOpacity, TouchableHighlight, Alert, Pressable, StyleSheet } from 'react-native';
+import { Text, StyleSheet, TextInput } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import {Home} from './src/screens/Home';
-import {Profile} from './src/screens/Profile';
+import { Home } from './src/screens/Home';
+import { Profile } from './src/screens/Profile';
+// import {Search} from './src/screens/Search';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import React, { useState } from 'react';
-import { TextInput } from 'react-native';
-  
-const Home = () => {
+const Stack = createNativeStackNavigator();
+
+
+const StackNavigator = () => {
   return (
-    <View>
-      <Text>Home</Text>
-      <Home />
-      <Profile />
-    </View>
-  )
+    <Stack.Navigator>
+      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="Profile" component={Profile} />
+    </Stack.Navigator>
+  );
 }
-  
 
 const App = () => {
-
   return (
-    <SafeAreaView style={styles.container} >
-      <Text style={styles.title}> WellCome </Text>
-      
+    <SafeAreaView style={styles.container}>
+     <NavigationContainer>
+        <StackNavigator />
+      </NavigationContainer>
     </SafeAreaView>
   );
 };
 
-export default App;
-
 const styles = StyleSheet.create({
-  container: {  flex: 1, backgroundColor: 'pink',alignItems: 'center', justifyContent: 'center',gap: 20 },
-  title: { fontSize: 24, fontWeight: 'bold' },
-  input: { width: '80%', height: 40, borderColor: 'gray', borderWidth: 1, borderRadius: 5, paddingHorizontal: 10, marginTop: 20 }
-})
+  container: { flex: 1, padding: 20, backgroundColor: '#fff' },
+  title: { fontSize: 24, fontWeight: 'bold', marginBottom: 12 },
+  input: { borderWidth: 1, borderColor: '#ccc', borderRadius: 8, padding: 10, marginTop: 16 },
+});
 
+export default App;

@@ -1,14 +1,15 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const Search = () => {
+export const Search = () => {
   return (
-    <View>
-      <Text>Search</Text>
+    <View style={styles.card}>
+      <Text style={styles.text}>Search</Text>
     </View>
   )
 }
 
-export default Search
-
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  card: { padding: 16, marginTop: 12, borderRadius: 8, backgroundColor: '#f2f2f2' ,width: '100%', alignItems: 'center', justifyContent: 'center'},
+  text: { fontSize: 16 },
+});

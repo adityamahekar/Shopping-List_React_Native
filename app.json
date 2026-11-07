@@ -1,3 +1,6 @@
 {
-  "name": "YtReactNative"
+  "name": "YtReactNative",
+  "android": {
+    "package": "com.anonymous.ytreactnative"
+  }
 }
