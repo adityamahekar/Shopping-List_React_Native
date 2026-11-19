@@ -17,11 +17,11 @@ A React Native mobile application built with Expo to manage inventory, track sto
 
 ## Screenshots
 
-Add your application screenshots inside the `assets/screenshots/` folder.
+Add your application screenshots inside the `assets/` folder.
 
 | Home Screen | Low Stock |
 |:---:|:---:|
-| ![Home Screen](./assets/home.jpeg) | ![Low Stock](./assets/low-stock.jpeg) |
+| ![Home Screen](./assets/home.jpeg) | ![Low Stock](./assets/all-items.jpeg) |
 
 | Create Item | Edit Item |
 |:---:|:---:|
