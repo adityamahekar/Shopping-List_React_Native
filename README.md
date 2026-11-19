@@ -21,11 +21,11 @@ Add your application screenshots inside the `assets/screenshots/` folder.
 
 | Home Screen | Low Stock |
 |:---:|:---:|
-| ![Home Screen](./assets/home.png) | ![Low Stock](./assets/low-stock.png) |
+| ![Home Screen](./assets/home.jpeg) | ![Low Stock](./assets/low-stock.jpeg) |
 
 | Create Item | Edit Item |
 |:---:|:---:|
-| ![Create Item](./assets/create-item.png) | ![Edit Item](./assets/p57.png) |
+| ![Create Item](./assets/create-item.jpeg) | ![Edit Item](./assets/p57.jpeg) |
 
 ---
 
