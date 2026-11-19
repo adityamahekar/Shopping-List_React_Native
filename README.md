@@ -96,31 +96,26 @@ backgroundColor:
 
 ## Getting Started
 
-### 1. Clone the Repository
 
-```bash
-git clone https://github.com/adityamahekar/LUNA.git
-```
-
-### 2. Navigate to Project Folder
+### 1. Navigate to Project Folder
 
 ```bash
 cd LUNA
 ```
 
-### 3. Install Dependencies
+### 2. Install Dependencies
 
 ```bash
 npm install
 ```
 
-### 4. Start Expo Development Server
+### 3. Start Expo Development Server
 
 ```bash
 npx expo start
 ```
 
-### 5. Run the Application
+### 4. Run the Application
 
 - Install Expo Go on your mobile device.
 - Scan the QR code displayed in the terminal.
