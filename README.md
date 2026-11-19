@@ -1,8 +1,164 @@
+# LUNA – Inventory Management App
 
+A React Native mobile application built with Expo to manage inventory, track stock quantities, add items, and identify low-stock products.
+
+---
+
+## Features
+
+- Add new inventory items with name and stock quantity.
+- View all available inventory items.
+- Track stock quantities in real time.
+- Identify low-stock items automatically.
+- Highlight items with low stock using a red background.
+- Display normal-stock items using a green background.
+- Manage application data using React Context and React Hooks.
+- Simple and user-friendly mobile interface.
+
+## Screenshots
+
+Add your application screenshots inside the `assets/screenshots/` folder.
+
+| Home Screen | Low Stock |
+|:---:|:---:|
+| ![Home Screen](./assets/home.png) | ![Low Stock](./assets/low-stock.png) |
+
+| Create Item | Edit Item |
+|:---:|:---:|
+| ![Create Item](./assets/create-item.png) | ![Edit Item](./assets/p57.png) |
+
+---
+
+## Tech Stack
+
+| Technology | Purpose |
+|:---|:---|
+| React Native | Mobile application development |
+| JavaScript (ES6+) | Application logic |
+| Expo | Development and testing environment |
+| React Hooks | State management |
+| Context API | Sharing application data |
+| React Native Components | Mobile UI development |
+| FlatList | Displaying inventory items |
+| StyleSheet | Component styling |
+| npm | Package management |
+
+---
+
+## Project Structure
+
+```text
+LUNA/
+│
+├── android/
+├── ios/
+├── src/
+│   ├── context/
+│   │   └── UserContext.jsx
+│   │
+│   ├── screens/
+│   │   ├── HomeScreen.jsx
+│   │   ├── AllItems.jsx
+│   │   ├── CreateScreen.jsx
+│   │   └── LowStock.jsx
+│   │
+│   └── Temp.jsx
+│
+├── App.jsx
+├── app.json
+├── package.json
+├── babel.config.js
+├── metro.config.js
+└── README.md
 ```
+
+---
+
+## Low Stock Detection
+
+LUNA automatically identifies products with a stock quantity of 5 or less.
+
+**Stock Status:**
+
+| Condition | Status | Background |
+|:---|:---|:---|
+| Stock ≤ 5 | Low Stock | Red (`#f16d78`) |
+| Stock > 5 | Available | Green (`#cdf3d7`) |
+
+**Implementation:**
+
+```javascript
+backgroundColor:
+  item.stock <= 5 ? '#f16d78' : '#cdf3d7'
+```
+
+---
+
+## Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/adityamahekar/LUNA.git
+```
+
+### 2. Navigate to Project Folder
+
+```bash
+cd LUNA
+```
+
+### 3. Install Dependencies
+
+```bash
+npm install
+```
+
+### 4. Start Expo Development Server
+
+```bash
 npx expo start
-
 ```
+
+### 5. Run the Application
+
+- Install Expo Go on your mobile device.
+- Scan the QR code displayed in the terminal.
+- Open the application in Expo Go.
+
+---
+
+## Development
+
+To run the application on an Android emulator:
+
+```bash
+npm run android
+```
+
+To start the Expo development server:
+
+```bash
+npx expo start
+```
+
+---
+
+## Future Enhancements
+
+- Edit and delete inventory items.
+- Search and filter inventory products.
+- Stock quantity update notifications.
+- Inventory analytics and dashboard.
+- Persistent storage using a database.
+- User authentication and authorization.
+
+<p align="center">
+  Developed with React Native and Expo
+</p>
+
+---
+---
 
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
