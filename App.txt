@@ -1,0 +1,79 @@
+
+import { Text, StyleSheet, TextInput } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { Home } from './src/screens/Home';
+import { Profile } from './src/screens/Profile';
+import { Search } from './src/screens/Search';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { NavigationContainer } from '@react-navigation/native';
+
+import { AntDesign, Feather } from '@expo/vector-icons';
+
+const Tab = createBottomTabNavigator();
+
+const MyTabs = () => {
+  return (
+    <Tab.Navigator
+      initialRouteName="Home"
+      screenOptions={{
+        tabBarActiveTintColor: 'red',
+        tabBarInactiveTintColor: 'blue',
+        tabBarLabelStyle: { fontSize: 12 },
+        tabBarStyle: {
+          backgroundColor: '#f5b2b2',
+          height: 120,
+          paddingBottom: 8,
+          paddingTop: 8,
+        },
+      }}
+    >
+      <Tab.Screen
+        name="Home"
+        component={Home}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <AntDesign name="home" size={size} color={color} />
+          ),
+        }}
+      />
+
+      <Tab.Screen
+        name="Profile"
+        component={Profile}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Feather name="user" size={size} color={color} />
+          ),
+        }}
+      />
+
+      <Tab.Screen
+        name="Search"
+        component={Search}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <AntDesign name="search" size={size} color={color} />
+          ),
+        }}
+      />
+    </Tab.Navigator>
+  );
+};
+
+const App = () => {
+  return (
+
+    <NavigationContainer>
+      <MyTabs />
+    </NavigationContainer>
+
+  );
+};
+
+const styles = StyleSheet.create({
+  container: { flex: 1, padding: 20, backgroundColor: '#e89494' },
+  title: { fontSize: 24, fontWeight: 'bold', marginBottom: 12 },
+  input: { borderWidth: 1, borderColor: 'rgb(249, 169, 169)', borderRadius: 8, padding: 10, marginTop: 16 },
+});
+
+export default App;
