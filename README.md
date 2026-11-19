@@ -1,4 +1,4 @@
-# LUNA – Inventory Management App
+# Inventory Management App
 
 A React Native mobile application built with Expo to manage inventory, track stock quantities, add items, and identify low-stock products.
 
