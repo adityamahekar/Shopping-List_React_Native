@@ -100,7 +100,7 @@ backgroundColor:
 ### 1. Navigate to Project Folder
 
 ```bash
-cd LUNA
+cd 
 ```
 
 ### 2. Install Dependencies
